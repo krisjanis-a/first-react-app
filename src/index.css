@@ -76,8 +76,8 @@ ol, ul {
   margin-left: 20px;
   height: fit-content;
   padding: 1rem;
-  width: fit-content;
-  overflow-y: scroll;
+  min-width: fit-content;
+  width: max-content;
   box-sizing: border-box;
   border-top: 0.15rem white solid;
   border-bottom: 0.15rem white solid;
@@ -86,9 +86,13 @@ ol, ul {
 .game-info button {
   background-color: rgb(150, 150, 150);
   color: white;
-  font: 0.8rem "Century Gothic", Futura, sans-serif;
+  font: 3vh "Century Gothic", Futura, sans-serif;
   outline: none;
   border-radius: 0.25rem;
+}
+
+.game-info li {
+  font: 3vh "Century Gothic", Futura, sans-serif;
 }
 
 .game-info button.activeListButton {
