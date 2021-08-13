@@ -3,10 +3,10 @@ body {
   margin: 20px;
   height: 100vh;
   display: flex;
-  /* justify-content: center; */
-  justify-content: flex-start;
-  /* align-items: center; */
-  align-items: flex-start;
+  justify-content: center;
+  /* justify-content: flex-start; */
+  align-items: center;
+  /* align-items: flex-start; */
   background-color: rgb(52, 49, 56);
 }
 
