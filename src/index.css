@@ -1,16 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  margin: 2rem auto;
+  font-family: "Play", sans-serif;
+  max-width: 1000px;
+}
+
 body {
-  font: 1rem "Century Gothic", Futura, sans-serif;
-  margin: 20px;
-  height: 100vh;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
-  /* justify-content: flex-start; */
   align-items: center;
-  /* align-items: flex-start; */
   background-color: rgb(52, 49, 56);
 }
 
-ol, ul {
+ol,
+ul {
   padding-left: 1rem;
 }
 
@@ -32,7 +42,7 @@ ol, ul {
   background: rgb(230, 230, 230);
   border: 1px solid #999;
   float: left;
-  font-size: 15vh;
+  font-size: 120px;
   font-weight: bold;
   line-height: 2.1rem;
   height: 100%;
@@ -42,6 +52,11 @@ ol, ul {
   text-align: center;
   width: 33.33%;
   color: rgb(41, 38, 44);
+  transition: all 0.25s ease-out;
+}
+
+.square:hover {
+  background: rgb(210, 210, 210);
 }
 
 .square.winningSquare {
@@ -59,25 +74,27 @@ ol, ul {
 .game {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
   height: fit-content;
 }
 
 .game-board {
   height: fit-content;
-  width: 50vh;
+  width: 400px;
 }
 
 .game-board > div {
-  height: 50vh;
+  height: 400px;
 }
 
 .game-info {
+  font-size: 2rem;
   color: white;
   margin-left: 20px;
   height: fit-content;
   padding: 1rem;
-  min-width: fit-content;
-  width: max-content;
+  width: 460px;
   box-sizing: border-box;
   border-top: 0.15rem white solid;
   border-bottom: 0.15rem white solid;
@@ -85,27 +102,59 @@ ol, ul {
 
 .game-info button {
   background-color: rgb(150, 150, 150);
+  padding: 0.5rem;
+  font-family: "Play", sans-serif;
   color: white;
-  font: 3vh "Century Gothic", Futura, sans-serif;
+  font-size: 1rem;
   outline: none;
   border-radius: 0.25rem;
+  transition: all 0.25s ease-out;
+}
+
+.game-info button:hover {
+  background-color: rgb(119, 119, 119);
 }
 
 .game-info li {
-  font: 3vh "Century Gothic", Futura, sans-serif;
+  font-family: "Play", sans-serif;
+  font-size: 1rem;
+}
+
+.game-info li > button {
+  width: 400px;
+  text-align: left;
 }
 
 .game-info button.activeListButton {
   font-weight: bold;
 }
 
+.toggleButton {
+  margin: 0.5rem auto;
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .game-info::-webkit-scrollbar {
-display: none;
+  display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .game-info {
--ms-overflow-style: none;  /* IE and Edge */
-scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+@media screen and (max-width: 1000px) {
+  .game {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .game-board {
+    margin: 1rem auto;
+  }
+
+  .game-info {
+    margin: 0 auto 1rem;
+  }
 }
